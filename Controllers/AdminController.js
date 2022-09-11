@@ -23,7 +23,7 @@ const getOneUser = async (req, res) => {
     const id = req.params.id;
     try {
         const user = await User.findById(id);
-        
+
         if (!user) {
             return res.status(401).send({
                 msg: 'No user found'
@@ -116,7 +116,8 @@ const updateUser = async (req, res) => {
         });
     }
 
-}
+};
+
 
 module.exports = {
     getAllUsers,
